@@ -1,0 +1,7 @@
+-   id: flake8-ruff
+    name: flake8-ruff
+    description: 'Wrapper for ruff that allows using flake8 configuration files'
+    entry: flake8-ruff
+    language: python
+    types: [python]
+    require_serial: true
