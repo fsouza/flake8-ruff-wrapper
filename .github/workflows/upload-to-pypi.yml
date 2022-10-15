@@ -16,11 +16,13 @@ jobs:
         with:
           python-version: 3.x
 
-      - run: pip install build twine
+      - run: pip install build
 
       - run: pip install -e .
 
       - run: python -m build --wheel --sdist
+
+      - run: pip install twine
 
       - run: twine upload --skip-existing dist/*
         env:
