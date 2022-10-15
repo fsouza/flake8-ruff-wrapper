@@ -18,8 +18,6 @@ jobs:
 
       - run: pip install build
 
-      - run: pip install -e .
-
       - run: python -m build --wheel --sdist
 
       - run: pip install twine
