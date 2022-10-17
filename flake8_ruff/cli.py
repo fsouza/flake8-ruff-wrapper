@@ -81,17 +81,18 @@ def map_cmdline_args(flake8_cmdline_options: Mapping[str, Any]) -> Sequence[str]
 def map_file_options(
     file_options: Mapping[str, Any],
 ) -> Mapping[str, Mapping[str, Any]]:
+    option_map = {
+        "max-line-length": "line-length",
+    }
     known_options = {
         "exclude",
         "extend-exclude",
-        "select",
+        "extend-ignore",
         "extend-select",
         "ignore",
-        "extend-ignore",
         "per-file-ignores",
-    }
-    option_map = {
-        "max-line-length": "line-length",
+        "select",
+        *option_map.keys(),
     }
     filter_functions: Mapping[str, Callable[[Any], Any]] = {
         "per-file-ignores": filter_per_file_ignores,
