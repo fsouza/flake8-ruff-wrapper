@@ -26,6 +26,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(argument_default=argparse.SUPPRESS)
     parser.add_argument("--exit-zero", action="store_true")
     parser.add_argument("--stdin-display-name", type=str)
+    parser.add_argument("--fix", action="store_true")
     parser.add_argument("files", nargs="+")
 
     cmdline_options = vars(parser.parse_args())
@@ -74,6 +75,9 @@ def map_cmdline_args(flake8_cmdline_options: Mapping[str, Any]) -> Sequence[str]
 
     if "stdin_display_name" in flake8_cmdline_options:
         args.append(f"--stdin-filename={flake8_cmdline_options['stdin_display_name']}")
+
+    if flake8_cmdline_options.get("fix"):
+        args.append("--fix")
 
     return [*args, *flake8_cmdline_options["files"]]
 
