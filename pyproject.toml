@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "flake8-ruff-wrapper"
-version = "0.2.1"
+version = "0.3.0"
 description = "Invoke ruff using flake8 options"
 license = { text = "ISC" }
 classifiers = [
