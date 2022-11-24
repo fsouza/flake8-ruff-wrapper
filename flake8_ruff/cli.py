@@ -41,6 +41,7 @@ def get_flake8_options() -> Mapping[str, Any]:
         version=flake8.__version__,
         plugin_versions=plugins.versions_str(),
         parents=[],
+        formatter_names=list(plugins.reporters.keys()),
     )
     register_default_options(option_manager)
 
