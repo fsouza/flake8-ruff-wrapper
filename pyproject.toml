@@ -21,7 +21,7 @@ classifiers = [
 ]
 urls = { Homepage = "https://github.com/fsouza/flake8-ruff-wrapper" }
 requires-python = ">=3.7"
-dependencies = ["flake8>=5.0.4", "ruff>=0.0.95", "toml>=0.10.2"]
+dependencies = ["flake8>=6.0.0", "ruff>=0.0.95", "toml>=0.10.2"]
 
 [project.readme]
 file = "README.md"
