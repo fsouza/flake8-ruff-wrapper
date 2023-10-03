@@ -13,15 +13,16 @@ classifiers = [
   "License :: OSI Approved :: ISC License (ISCL)",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Topic :: Software Development :: Quality Assurance",
 ]
 urls = { Homepage = "https://github.com/fsouza/flake8-ruff-wrapper" }
-requires-python = ">=3.7"
-dependencies = ["flake8>=6.0.0", "ruff>=0.0.137", "toml>=0.10.2"]
+requires-python = ">=3.8"
+dependencies = ["flake8>=6.1.0", "ruff>=0.0.292", "toml>=0.10.2"]
 
 [project.readme]
 file = "README.md"
